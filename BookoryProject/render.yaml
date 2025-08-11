@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bookory
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      # Demo DB in-memory (change to SQL Server later for persistence)
+      - key: DB_URL
+        value: jdbc:h2:mem:bookory;DB_CLOSE_DELAY=-1;MODE=MSSQLServer
+      - key: HIBERNATE_DIALECT
+        value: org.hibernate.dialect.H2Dialect
+

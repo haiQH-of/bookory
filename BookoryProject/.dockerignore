@@ -1,0 +1,22 @@
+# VCS
+.git
+.gitignore
+
+# IDE
+.idea
+.vscode
+
+# Build outputs
+/target
+**/target
+
+# OS/OneDrive artifacts
+.DS_Store
+Thumbs.db
+~$*
+
+# Logs
+*.log
+
+# Node
+node_modules
